@@ -1,0 +1,60 @@
+class jaa
+{
+	static java.util.Scanner sc = new java.util.Scanner(System.in);
+	static jaa obj = new jaa();
+	void m1()
+	{
+		System.out.println("In m1");
+	}
+	static void m2()
+	{
+		obj.m1();
+		System.out.println("In m2");
+	}
+	void m3(int x)
+	{
+		jaa.m2();
+		System.out.println(x);
+	}
+	static void m4(String s)
+	{
+		int x = sc.nextInt();
+		obj.m3(x);
+		System.out.println(s);
+	}
+	String m5()
+	{
+		String s = sc.next();
+		jaa.m4(s);
+		String k = sc.next();
+		return k;
+	}
+	static float m6()
+	{
+		System.out.println(obj.m5());
+		float f = sc.nextFloat();
+		return f;
+	}	
+	long m7(boolean b)
+	{
+		System.out.println(jaa.m6());
+		System.out.println(b);
+		long l = sc.nextLong();
+		return l;
+	}
+	static double m8(char c)
+	{
+		boolean x = sc.nextBoolean();
+		System.out.println(obj.m7(x));
+		System.out.println(c);
+		double d = sc.nextDouble();
+		return d;
+	}
+	
+
+	public static void main(String arg[])
+	{
+		char c = sc.next().charAt(0);
+		System.out.println(jaa.m8(c));
+	}
+}

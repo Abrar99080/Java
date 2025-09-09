@@ -1,0 +1,30 @@
+class c3
+{
+static java.util.Scanner sc = new java.util.Scanner(System.in);
+	c3()
+	{
+		System.out.println("Default Constructor");
+	}
+	c3(int a)
+	{
+		System.out.println(a);
+	}
+	c3(float f,boolean b)
+	{
+		System.out.println(f);
+		System.out.println(b);
+	}
+}
+class c3q
+{
+	public static void main(String arg[])
+	{
+		int a = c3.sc.nextInt();
+		float f = c3.sc.nextFloat();
+		Boolean v = c3.sc.nextBoolean();
+		c3 obj = new c3();	
+		c3 obj1 = new c3(a);
+		c3 obj2 = new c3(f,v);
+		
+	}	
+}

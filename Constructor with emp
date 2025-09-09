@@ -1,0 +1,21 @@
+class emp
+{
+	int id;
+	String name;
+	double salary;
+	emp(int a, String s, double b)
+	{
+		id=a;
+		name=s;
+		salary=b;
+		System.out.print(a+" "+s+" "+b);	
+	}
+}
+class emp1
+{
+	public static void main(String arg[])
+	{
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		new emp(sc.nextInt(),sc.next(),sc.nextDouble());
+	}
+}

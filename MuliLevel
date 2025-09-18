@@ -1,0 +1,36 @@
+class mobile
+{
+	static java.util.Scanner sc = new java.util.Scanner(System.in);
+	String RAM = sc.next();
+	String ROM = sc.next();
+	String CAM = sc.next();
+	String Processor = sc.next();
+	String OS = sc.next();
+	String battery = sc.next();
+	String Brand = sc.next();
+	String Color = sc.next();
+	double price = sc.nextDouble();
+}
+class WholeSale extends mobile
+{
+	double price1 = price+ mobile.sc.nextDouble();
+}
+class retail extends WholeSale
+{
+	double price2 = price1 + mobile.sc.nextDouble();
+}
+class customer extends retail
+{
+	void display()
+	{
+		System.out.print(RAM+" "+ROM+" "+CAM+" "+Processor+" "+OS+" "+battery+" "+Brand+" "+Color+" "+price2);			
+	}
+	
+}
+class test
+{
+	public static void main(String arg[])
+	{
+		new customer().display();
+	}
+}

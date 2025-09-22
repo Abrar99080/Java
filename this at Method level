@@ -1,0 +1,27 @@
+class th {
+	static java.util.Scanner sc = new java.util.Scanner(System.in);
+	String m1(int a)
+	{
+		System.out.print(a);
+		return sc.next();
+	}
+	boolean m2(double b)
+	{
+		System.out.print(this.m1(sc.nextInt()));
+		System.out.print(b);
+		return sc.nextBoolean();
+	}
+	float m3(char c)
+	{
+		System.out.print(this.m2(sc.nextDouble()));
+		System.out.print(c);
+		return sc.nextFloat();
+	}
+}
+class test
+{
+	public static void main(String arg[])
+	{
+		System.out.print(new th().m3(th.sc.next().charAt(0)));
+	}
+}

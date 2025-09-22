@@ -1,0 +1,48 @@
+class th1 {
+	static java.util.Scanner sc = new java.util.Scanner(System.in);
+	int a = sc.nextInt();
+
+	th1()
+	{
+		System.out.print("Default");
+	}
+	th1(String s)
+	{
+	
+		this(sc.nextInt(),sc.nextFloat());
+		System.out.print(s);
+	}
+
+		boolean m1(long l)
+		{
+			System.out.print(l);
+			return sc.nextBoolean();
+		}
+
+
+	th1(int a,float b)
+	{
+		
+		System.out.println(a+" "+b);
+		System.out.print(this.a);
+
+	}
+
+		void m2()
+		{
+			System.out.print("IN m2 ");
+		}
+	th1(th1 obj)
+	{
+		System.out.print(obj);
+	}
+}
+class test
+{
+	public static void main(String arg[])
+	{
+		th1 obj = new th1(th1.sc.next());
+		new th1(obj);
+		
+	}
+}

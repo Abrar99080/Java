@@ -1,0 +1,63 @@
+import java.util.Scanner;
+class A
+{
+    public static void main(String arg[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int fc=0,af=0,bf=0;
+        if(a>0)
+        {
+            for(int i=a-1;i>=1;i--)
+            {
+                fc=0;
+                for(int j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        fc++;
+                    }
+                }
+                if(fc==2)
+                {
+                    bf=i;
+                    break;
+                }
+            }
+            
+            for(int i=a+1; ;i++)
+            {
+                fc=0;
+                for(int j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        fc++;
+                    }
+                }
+                if(fc==2)
+                {
+                    af=i;
+                    break;
+                }
+            }
+            if((a-bf)==(af-a))
+            {
+                System.out.println(bf);
+                System.out.print(af);
+            }
+            else if((a-bf)<(af-a))
+            {
+                System.out.print(bf);
+            }
+            else
+            {
+                System.out.print(af);
+            }
+        }
+        else
+        {
+            System.out.print("InValid Input");
+        }
+    }
+}

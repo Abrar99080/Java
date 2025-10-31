@@ -1,0 +1,37 @@
+class A
+{
+static java.util.Scanner sc = new java.util.Scanner(System.in);
+	A()
+	{
+		System.out.println("A Def");
+	}
+	A(float a)
+	{
+		System.out.println(a);
+	}
+	int m1(String b)
+	{
+		System.out.println(b);
+		return sc.nextInt();
+	}
+	String m2()
+	{
+		return sc.next();
+	}
+	float m3(int c)
+	{
+		System.out.println(c);
+		return sc.nextFloat();
+	}
+	static void disp(int x,String y,float z)
+	{
+		System.out.println(x+" "+y+" "+z);
+	}
+}
+class test
+{
+	public static void main(String arg[])
+	{
+		A.disp(new A(A.sc.nextFloat()).m1(A.sc.next()),new A().m2(),new A().m3(A.sc.nextInt()));
+	}
+}

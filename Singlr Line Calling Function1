@@ -1,0 +1,37 @@
+class B
+{
+static java.util.Scanner sc = new java.util.Scanner(System.in);
+	B()
+	{
+		System.out.println("def");
+	}
+	B(String s)
+	{
+		System.out.println(s);
+	}	
+	char m1(int a)
+	{
+		System.out.println(a);
+		return sc.next().charAt(0);
+	}
+	float m2(String s)
+	{
+		System.out.println(s);
+		return sc.nextFloat();
+	}
+	int m3()
+	{
+		return sc.nextInt();
+	}
+	void display(char x, float y, int z)
+	{
+		System.out.println(x+" "+y+" "+z);
+	}
+}
+class test
+{
+	public static void main(String arg[])
+	{
+		new B().display	(new B(B.sc.next()).m1(B.sc.nextInt()),new B().m2(B.sc.next()),new B().m3());
+	}
+}

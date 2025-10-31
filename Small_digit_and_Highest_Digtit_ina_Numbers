@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class Main
+{
+    public static void main(String []args)
+    {
+        //Write your code here
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int c=0;
+        if(a==0)
+        {
+            System.out.print("InvaliD Input");
+        }
+        else
+        {
+            if(a>0)
+            {
+                while(a!=0)
+                {
+                    c++;
+                    a=a/10;
+                }
+                if(c==1)
+                {
+                    System.out.print("Given Number consists of only 1 Digit.");
+                }
+                else
+                {
+                    System.out.print("Given Number consists of "+c+" Digits.");
+                }
+            }
+            else
+            {
+                while(a!=0)
+                {
+                    c++;
+                    a=a/10;
+                }
+                if(c==1)
+                {
+                    System.out.print("Given Number consists of only 1 Digit and it is Negative Value.");
+                }
+                else
+                {
+                    System.out.print("Given Number consists of "+c+" Digits and it is Negative Value.");
+                }
+            }
+        }
+    }
+}

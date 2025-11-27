@@ -1,0 +1,31 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        String s = "1B";
+        int c=0,sum=0;
+        
+        for(int i=s.length()-1;i>=0;i--)
+        {
+            char ch = s.charAt(i);
+            int p = (int)Math.pow(16,c++);
+            if(ch>='0' && ch<='9')
+            {
+                sum=sum+(ch-48)*p;   
+            }
+            else if(ch>='A' && ch<='F')
+            {
+                sum=sum+(ch-55)*p;
+            }
+        }
+        //System.out.print(sum);
+        String k="";
+        while(sum!=0)
+        {
+            int r = sum%8;
+            k=r+k;
+            sum/=8;
+        }
+        System.out.print(k);
+    }
+}

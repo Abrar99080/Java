@@ -1,0 +1,32 @@
+package Pattern;
+
+public class RhombusBorder {
+	public static void main(String[] args) {
+		int a = 678912;
+		int t = a,c=0;
+		while(t!=0)
+		{
+			c++;
+			t/=10;
+		}
+		if(c%2!=0)
+		{
+			System.out.print("Not Tech Number");
+		}
+		else
+		{
+			int p = (int)Math.pow(10, c/2);
+			int f = a/p;
+			int s = a%p;
+			int sum=f+s;
+			if(sum*sum==a)
+			{
+				System.out.println("Tech Number");
+			}
+			else
+			{
+				System.out.println("Not a Tech Number");
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+import java.util.Arrays;
+
+public class NONFIB {
+    public static void main(String[] args) {
+        int n = 5;
+        int x = (n*(n+1))/2;
+        int a[] = new int[x];
+        int f=4,f1=5,f2=8,in=0;
+        while(in<x)
+        {
+            if(f!=f1)
+            {
+                a[in++]=f;
+                f=f+1;
+            }
+            else
+            {
+                a[in++] = f + 1;
+                f = f + 2;
+                int c = f1 + f2;
+                f1 = f2;
+                f2 = c;
+            }
+        }
+        //System.out.print(Arrays.toString(a));
+
+        int n1 = 5;
+        int x1 = (n1*(n1+1))/2;
+        int pn[] = new int[x1];
+        int c1=0;
+        for(int i=2; ;i++)
+        {
+            int fc=0;
+            for(int j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                {
+                    fc++;
+                }
+            }
+            if(fc==2)
+            {
+                if(x1==c1)
+                    break;
+               pn[c1++]=i;
+            }
+        }
+        //System.out.print(c1);
+        //System.out.print(Arrays.toString(pn));
+
+        int count=0,count1=0,co=0;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+
+                if(co%2==1)
+                {
+                    System.out.print(a[count1]+" ");
+                    count1++;
+                }
+                else {
+                    System.out.print(pn[count]+" ");
+                    count++;
+                }
+                co++;
+            }
+            System.out.println();
+        }
+
+    }
+}

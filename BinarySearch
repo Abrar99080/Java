@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BinarySearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a[] = {12,3,4,52,32,23,89,56,28};
+        int mid=0;
+        int n = a.length;
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a));
+        System.out.println("Enter search Value");
+        int key = sc.nextInt();
+
+        int s=0;
+        int e=n-1;
+
+        while(s<=e)
+        {
+            mid = (s+e)/2;
+            if(a[mid] == key)
+            {
+                System.out.print("Element Found ");
+                break;
+            }
+            else if(key > a[mid])
+            {
+                s=mid+1;
+            }
+            else {
+                e=mid-1;
+            }
+        }
+//        System.out.println(s+" "+e+" "+mid);
+        if(s>e)
+        {
+            System.out.print("Element Not Found ");
+        }
+    }
+}
